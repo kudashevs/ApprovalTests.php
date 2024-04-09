@@ -6,7 +6,8 @@ use ApprovalTests\Reporters;
 use ApprovalTests\Reporters\CombinationReporter;
 use Exception;
 
-class TestReporter implements Reporters\Reporter {
+class TestReporter implements Reporters\Reporter
+{
     public $working = true;
     public $reported = false;
     public $throwError = false;
