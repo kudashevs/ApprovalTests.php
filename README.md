@@ -67,7 +67,7 @@ Examples
 ---
 ApprovalTests eats it own dogfood, so the best examples are in the source code itself.
 
-None the less,  Here's a quick look at some
+None the less, here's a quick look at some
 [Sample Code](https://github.com/approvals/ApprovalTests.php/blob/9ce5bbd043ea2720bdfe5bbdf25f23a225329485/tests/ApprovalTest.php#L8)
 
 <!-- snippet: array_example -->
