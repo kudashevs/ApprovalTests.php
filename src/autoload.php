@@ -1,7 +1,6 @@
 <?php
 
-$vendor_autoload = dirname(__FILE__) . "/../vendor/autoload.php";
-require_once($vendor_autoload);
+require_once __DIR__ . '/../vendor/autoload.php';
 
 function exception_error_handler($errno, $errstr, $errfile, $errline)
 {
