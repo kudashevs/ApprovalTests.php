@@ -6,8 +6,8 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
 
   build:
+    runs-on: ubuntu-latest
     name: "PHP ${{ matrix.php}} / ${{matrix.php_unit}} "
-    runs-on: ubuntu-18.04
 
     strategy:
       matrix:
