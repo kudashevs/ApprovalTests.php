@@ -7,16 +7,36 @@ use ApprovalTests\SystemUtil;
 class GenericDiffReporter implements Reporter
 {
     public static $STANDARD_ARGUMENTS = "%s %s";
-    public static $TEXT_FILE_EXTENSIONS = [".txt", ".csv", ".htm", ".html", ".xml", ".eml",
-        ".java", ".css", ".js", ".json"];
-    public static $IMAGE_FILE_EXTENSIONS = [".png", ".gif", ".jpg", ".jpeg", ".bmp", ".tif",
-        ".tiff"];
+
+    public static $TEXT_FILE_EXTENSIONS = [
+        ".txt",
+        ".csv",
+        ".htm",
+        ".html",
+        ".xml",
+        ".eml",
+        ".java",
+        ".css",
+        ".js",
+        ".json",
+    ];
+
+    public static $IMAGE_FILE_EXTENSIONS = [
+        ".png",
+        ".gif",
+        ".jpg",
+        ".jpeg",
+        ".bmp",
+        ".tif",
+        ".tiff",
+    ];
 
     private $diffProgram;
     private $fileExtensions;
     private $parameters;
 
-    public function __construct(string $diffProgram, array $fileExtensions, string $parameters) {
+    public function __construct(string $diffProgram, array $fileExtensions, string $parameters)
+    {
         $this->diffProgram = $diffProgram;
         $this->fileExtensions = $fileExtensions;
         $this->parameters = $parameters;
