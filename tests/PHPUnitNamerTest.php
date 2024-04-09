@@ -10,6 +10,6 @@ class PHPUnitNamerTest extends TestCase
         $namer = new PHPUnitNamer();
         $this->assertEquals('ApprovalTests\\Tests\\PHPUnitNamerTest', $namer->getCallingTestClassName());
         $this->assertEquals('testTheClassParts', $namer->getCallingTestMethodName());
-        $this->assertEquals(dirname(__FILE__), $namer->getCallingTestDirectory());
+        $this->assertEquals(__DIR__, $namer->getCallingTestDirectory());
     }
 }
