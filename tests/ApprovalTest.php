@@ -30,7 +30,7 @@ class ApprovalTest extends TestCase
             'two' => 'James',
             'three' => 'LLewellyn',
             'four' => 'Asaph',
-            'five' => 'Dana'
+            'five' => 'Dana',
         ];
         Approvals::verifyList($list);
     }
@@ -51,7 +51,7 @@ class ApprovalTest extends TestCase
             "code" => [
                 "rgba" => [255, 255, 255, 1],
                 "hex" => "#000",
-            ]
+            ],
         ];
         Approvals::verifyAsJson($obj);
     }
