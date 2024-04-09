@@ -43,7 +43,7 @@ It's on [Packagist](https://packagist.org/packages/approvals/approval-tests);
 search for 'approval-tests'. If you're using Composer, you can add it as follows:
 
 ```sh
-composer req --dev approvals/approval-tests
+composer require --dev approvals/approval-tests
 ```
 
 [Video Tutorials](http://www.youtube.com/playlist?list=PLFBA98F47156EFAA9&feature=view_all)
