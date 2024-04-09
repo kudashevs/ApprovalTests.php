@@ -25,7 +25,7 @@ class ClipboardReporter implements Reporter
     {
         $clipboardCommand = SystemUtil::isWindows() ? "clip" : "pbclip";
         $cmd = "echo " . $newClipboardText . " | " . $clipboardCommand;
-		shell_exec($cmd);
+        shell_exec($cmd);
     }
 
     public function isWorkingInThisEnvironment($receivedFilename)
