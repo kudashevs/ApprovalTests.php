@@ -4,7 +4,8 @@ namespace ApprovalTests;
 
 use ApprovalTests\Reporters\Reporter;
 
-class SkipCombinationException extends \Exception {
+class SkipCombinationException extends \Exception
+{
 }
 
 class CombinationApprovals
