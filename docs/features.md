@@ -20,7 +20,7 @@ public function testVerifyAsJson()
         "code" => [
             "rgba" => [255, 255, 255, 1],
             "hex" => "#000",
-        ]
+        ],
     ];
     Approvals::verifyAsJson($obj);
 }
