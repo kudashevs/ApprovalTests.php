@@ -87,6 +87,8 @@ class CombinationApprovals
 
     public static function displayArguments(...$args): string
     {
-        return '[' . implode(', ', array_filter($args, function($i) { return $i !== self::$empty[0]; })) . "] => ";
+        return '[' . implode(', ', array_filter($args, function ($i) {
+                return $i !== self::$empty[0];
+            })) . "] => ";
     }
 }
