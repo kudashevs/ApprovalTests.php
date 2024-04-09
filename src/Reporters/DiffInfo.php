@@ -18,7 +18,7 @@ class DiffInfo
     private static function resolveWindowsPath(string $diffProgram): string
     {
         $tag = "{ProgramFiles}";
-        
+
         $startsWith = substr($diffProgram, 0, strlen($tag)) === $tag;
         if ($startsWith) {
             $diffProgram = self::getPathInProgramFilesX86(substr($diffProgram, strlen($tag)));
