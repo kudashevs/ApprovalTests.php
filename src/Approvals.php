@@ -38,21 +38,20 @@ class Approvals
         $extension = $writer->getExtensionWithoutDot();
         $approvedFilename = $namer->getApprovedFile($extension);
         if (!file_exists($approvedFilename)) {
-          $writer->writeEmpty(
-            $namer->getApprovedFile($extension),
-            $namer->getApprovalsDirectory());
+            $writer->writeEmpty(
+                $namer->getApprovedFile($extension),
+                $namer->getApprovalsDirectory());
         }
 
         $receivedFilename = $writer->write(
-          $namer->getReceivedFile($extension),
-          $namer->getApprovalsDirectory());
+            $namer->getReceivedFile($extension),
+            $namer->getApprovalsDirectory());
 
         $matching = FileApprover::checkFiles($approvedFilename, $receivedFilename);
 
         if ($matching) {
             $writer->delete($receivedFilename);
-        }
-        else {
+        } else {
             $reporter->report($approvedFilename, $receivedFilename);
             throw new ApprovalMismatchException($approvedFilename, $receivedFilename);
         }
